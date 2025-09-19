@@ -1,0 +1,74 @@
+{
+  "name": "cmc-naperville-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.0.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "lucide-react": "^0.263.1",
+    "clsx": "^2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.0",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8"
+  }
+}
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Camelback Medical Centers – Naperville',
+  description: 'Expert chiropractic care in Naperville, IL',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
+}
+  export default function Home() {
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-blue-900 to-green-800 flex items-center justify-center">
+      <div className="text-center text-white">
+        <h1 className="text-6xl font-bold mb-4">
+          CAMELBACK MEDICAL CENTERS
+        </h1>
+        <p className="text-2xl text-red-300 font-bold mb-8">
+          THE PAIN RELIEF CLINIC
+        </p>
+        <p className="text-xl mb-8">
+          Expert Chiropractic Care in Naperville, IL
+        </p>
+        <a href="tel:(630)555-1212" className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-xl font-bold">
+          Call (630) 555-1212
+        </a>
+      </div>
+    </main>
+  )
+}
+    @tailwind base;
+@tailwind components;
+@tailwind utilities;
