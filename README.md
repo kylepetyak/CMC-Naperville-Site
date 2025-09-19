@@ -1,22 +1,9 @@
-# CMC-Naperville-Sitenpx create-next-app@latest . --typescript --tailwind --eslint --app
+npx create-next-app@latest . --typescript --tailwind --eslint --app
 npm install lucide-react clsx
-# Camelback Medical Centers - Complete Project Files
-
-## Step 1: Create these folders in your GitHub repo:
-```
 /app
 /app/components  
 /app/lib
-/public
-```
-
-## Step 2: Create these files:
-
-### Root Files:
-
-**package.json**
-```json
-{
+/public{
   "name": "camelback-medical-website",
   "version": "0.1.0",
   "private": true,
@@ -45,10 +32,6 @@ npm install lucide-react clsx
     "postcss": "^8"
   }
 }
-```
-
-**next.config.js**
-```javascript
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -60,10 +43,6 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
-```
-
-**tailwind.config.js**
-```javascript
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -91,4 +70,3 @@ module.exports = {
   },
   plugins: [],
 }
-```
